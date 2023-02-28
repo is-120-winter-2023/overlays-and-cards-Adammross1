@@ -1,0 +1,272 @@
+/*****************************************************/
+/* This semester we will be using my variation of    */
+/* Josh Comeau's CSS Reset instead of normalize      */
+/* Read more at                                      */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+/*****************************************************/
+/* Always add your CSS below the reset CSS           */
+/*****************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  /* this an experimental line-height; if it breaks, add line-height: 1.5 to body */
+  line-height: calc(1em + 0.5rem);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* until you get a feel for overflow, I'll keep these next two commented out */
+/* p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} */
+
+/* p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+} */
+
+/* temp CSS for HTML only assignments */
+picture img {
+  width: 100%;
+}
+
+svg {
+  width: 200px;
+}
+
+/* temp fix to size about img */
+img[srcset] {
+  width: 50%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+/* temporary fix to size svg images */
+img[src$="svg"] {
+  width: 200px;
+}
+
+/************ add your CSS here *****************/
+
+:root {
+  --color-font: #444;
+  --light-blue: #9dc6be;
+  --tan: #d3c2ae;
+  --seafoam: #a4c4bf;
+  --cream: #fffcef;
+  --dark-blue: #40656d;
+  --color-font-white: #f0f8ff;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  color: var(--color-font);
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+  flex-direction: column;
+}
+
+main {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 70rem;
+}
+
+p {
+  margin-bottom: 3em;
+  text-align: center;
+}
+
+article {
+  margin-bottom: 3em;
+}
+
+aside {
+  margin-bottom: 3em;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 70rem;
+}
+
+footer {
+  padding: 2em;
+  background-color: var(--color-font);
+  color: var(--color-font-white);
+  margin: 0em;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  align-self: stretch;
+  font-size: 1rem;
+}
+
+figure {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Bitter", serif;
+  color: white;
+  text-shadow: 4px 4px 10px #222;
+  font-size: 5rem;
+  letter-spacing: 2rem;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h2 {
+  font-family: "Bitter", serif;
+  color: var(--seafoam);
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  font-family: "Bitter", serif;
+  color: var(--seafoam);
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-family: "Bitter", serif;
+  color: var(--seafoam);
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--seafoam);
+  text-decoration: none;
+}
+
+a[href]:hover {
+  color: var(--light-blue);
+  transition: color 300ms;
+}
+
+.button[href] {
+  font-size: 1rem;
+  color: var(--dark-blue);
+  border: 1px solid var(--dark-blue);
+  padding: 0.5em 2.5em;
+  margin: 1rem;
+  display: inline-block;
+
+  transition: background-color 300ms, color 300ms;
+}
+
+.button[href]:hover {
+  background-color: var(--dark-blue);
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero h1 {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0px;
+  transform: translate(-50%, -50%);
+  font-size: clamp(3.5rem, 7vw, 10rem);
+  line-height: 1em;
+}
+
+.hero p {
+  text-align: center;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(1.5rem, 1vw, 5rem);
+  line-height: 2em;
+  color: #444;
+  /* text-shadow: 3px 3px 7px #222; */
+}
+
+.hero img {
+  opacity: 80%;
+}
+
+.card {
+  max-width: 300px;
+  padding: 15px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  transition: transform 300ms ease;
+}
+
+.card img {
+  border-radius: 40%;
+  padding: 1rem 3rem;
+  transition: box-shadow 300ms;
+}
+
+.cards {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
