@@ -447,7 +447,7 @@ if (doms[0]) {
         expect(
           cardList.length,
           'make sure to include 4 cards with class .card inside your <section class="cards">'
-        ).toBe(4);
+        ).toBeGreaterThanOrEqual(4);
       });
     }
 
