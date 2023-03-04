@@ -261,6 +261,16 @@ a[href]:hover {
   background-image: linear-gradient(to top, #fff 8%, transparent 30%);
 }
 
+picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero picture {
+  height: 100%;
+}
+
 .card {
   max-width: 300px;
   padding: 15px;
