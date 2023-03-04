@@ -102,7 +102,7 @@ body {
 main {
   align-self: center;
   padding: 0 1rem;
-  max-width: 70rem;
+  max-width: 90rem;
   color: var(--color-font);
   font-weight: 500;
   font-size: 1.25rem;
@@ -162,8 +162,8 @@ h2 {
   color: var(--dark-blue);
   font-size: 4rem;
   text-align: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 h3 {
@@ -240,7 +240,7 @@ a[href]:hover {
   margin: 0;
   text-align: center;
   font-size: clamp(3.5rem, 4.5vw, 10rem);
-  letter-spacing: 3.5vw;
+  letter-spacing: 2.5vw;
   font-weight: 900;
   line-height: 2;
 }
@@ -295,7 +295,7 @@ picture img {
   display: flex;
   gap: 3rem;
   padding: 1rem;
-  font-size: 1.3em;
+  font-size: 1em;
   font-weight: bold;
   text-align: center;
   margin: 1rem 0;
